@@ -2,28 +2,32 @@
 //3.31
 //Top down coding
 
+//Global variables (use it anywhere in the program-unlimited)
+//problem: need to reuse variables and rename again
 color beige=#fdf0d5;
 color red=#c1121f;
 color black=#000000;
 color blue=#669bbc;
 
-float x; //decimal numbers
-int b; //integer
+float a=0.5; //decimal numbers
+int b=10; //integer
 
 void setup() {
   size(800, 600);
+  b= b+a;
 }
 
 void draw() { //on loop
   background (beige);
   
-  face(100,100,1); //x, y, scale factor
+  face(100,100,1); //x, y, scale factor // int int float
   face(400, 100,0.5);
   face(100,400,0.5);
   face(400,400,0.5);
 }
 
-void face (int x, int y, float s) {
+void face (float x, float y, float s) { //can change int to float
+//the variables only exist within the function eg. draw/setup
   pushMatrix(); //lock to new coordinate (temporary transformation) 
   //not everything moves to same position)
   
