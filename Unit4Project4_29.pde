@@ -37,6 +37,7 @@ void drawHeel() {
   fill(255, 182, 193);
   stroke(0);
   rect(10, 0, 40, 20); //heel
+
 }
 
 void drawRibbon1() {
