@@ -52,24 +52,47 @@ void igloo(int x, int y) { //How can igloo randomly position without changing in
  
 }
 
-void structure(){ //How to make the ellipses have different color for each one
+//void structure(){ //How to make the ellipses have different color for each one
 //How to make ellipses avoid background color & water color & avoid repeat
 //  noStroke();
-  fill(random(0,255),random(0,255),random(0,255),random(0,255)); //(hue, saturation, brightness)
+  //fill(random(0,255),random(0,255),random(0,255),random(0,255)); //(hue, saturation, brightness)
   //How to randomize transparency?
   
-  strokeWeight(3);
-  ellipse(50,350,200,200);
-  ellipse(300,350,200,200);
-  ellipse(550,350,200,200);
-  ellipse(800,350,200,200);
+  //strokeWeight(3);
+  //ellipse(50,350,200,200);
+  //ellipse(300,350,200,200);
+  //ellipse(550,350,200,200);
+  //ellipse(800,350,200,200);
   
-  popMatrix();
+  //popMatrix();
   
   //fill bottom of circle (not show in water)
+  //fill(#023e8a);
+  //rect(0,450,1000,50);
+
+//}
+
+
+//NEW?
+void structure() {
+  strokeWeight(3);
+  
+  fill(random(0,255),random(0,255),random(0,255),random(100, 255));
+  ellipse(50,350,200,200);
+  
+  fill(random(0,255),random(0,255),random(0,255),random(100, 255));
+  ellipse(300,350,200,200);
+  
+  fill(random(0,255),random(0,255),random(0,255),random(100, 255));
+  ellipse(550,350,200,200);
+  
+  fill(random(0,255),random(0,255),random(0,255),random(100, 255));
+  ellipse(800, 350, 200, 200);
+
+  //cover bottom part
+  noStroke();
   fill(#023e8a);
   rect(0,450,1000,50);
-
 }
 
 void door(){ //HOW do i put the rectangle and the triangle together?=Same function
@@ -121,6 +144,8 @@ triangle(100, peakY, 50, 200, 150, 200); //sides same,peak change
 
 
 void water() {
+  popMatrix();
+  
   fill(173, 232, 244);
   rect(0,450,1000,350); //more round edges variable
   
